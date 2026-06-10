@@ -1,0 +1,32 @@
+.person{
+   display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 50px 100px 150px;
+    gap:1cm;
+}
+header{
+    grid-column: 1 /3;
+    background-color: red;
+}
+main{
+    grid-column: 1 /2;
+    background-color: green;
+}
+footer{
+    grid-column: 1 /3;
+    background-color: blue;
+}
+aside{
+    grid-column: 2 /3;
+    background-color: yellow;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1cm;
+}
+.d{
+    background-color: pink;
+    color: black;
+    padding: 1cm;
+}
