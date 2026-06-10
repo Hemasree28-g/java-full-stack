@@ -1,0 +1,18 @@
+img{
+    width: 300px;
+    height: 600px;
+    margin: 50px;
+    border-style: solid;
+    border-color: chartreuse;
+    border-radius: 600px;
+    border-width: 2cm;
+}
+h1{
+    text-align: center;
+    border-style: solid;
+    border: radius 200px; 
+    border-color: blue ;
+}
+p{
+    -webkit-text-fill-color: brown;
+}
