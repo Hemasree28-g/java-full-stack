@@ -1,9 +1,13 @@
 
+
 body{
     display: flex;
     flex-direction: row;
   
     align-items: center;
     gap: 1cm;
+}
+*{
     
+    background-image: linear-gradient(to right, green, pink);
 }
