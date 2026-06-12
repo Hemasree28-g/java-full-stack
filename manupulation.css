@@ -1,0 +1,21 @@
+img{
+    width: 350px;
+    height: 300px;
+    align-items: center;
+    background-color: rgb(148, 224, 136);
+}
+body{
+    background-color: rgb(224, 177, 136);
+}
+#content{
+    display: flex;
+    gap:1cm;
+}
+p{
+    color:purple;
+    font-size: 28px;
+    font-style: italic;
+}
+h1{
+ text-align: center;
+}

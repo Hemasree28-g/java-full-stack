@@ -1,63 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navya</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>G. Hemasree — Software Engineer</title>
+    <meta name="description" content="Portfolio of G. Hemasree — Software Engineer. BTech from Mother Therasa Engineering Collage." />
+    <style>
+        :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#4f46e5;--glass:rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.5;background:linear-gradient(180deg,#071029 0%,#081426 100%);color:#e6eef8}
+    .container{max-width:1000px;margin:32px auto;padding:24px}
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{width:110px;height:110px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:36px;flex:0 0 110px}
+    .hero h1{margin:0;font-size:28px}
+    .hero p{margin:6px 0;color:var(--muted)}
+    .badge{display:inline-block;padding:6px 10px;background:var(--glass);border-radius:999px;font-size:13px;color:var(--muted);margin-top:8px}
+
+    main{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:22px}
+    @media (max-width:900px){main{grid-template-columns:1fr;}}
+
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.04);padding:18px;border-radius:12px}
+    h2{margin:0 0 10px 0}
+    .section{margin-bottom:16px}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:8px;font-size:13px;color:var(--muted)}
+    .projects .proj{padding:12px;border-radius:10px;background:linear-gradient(90deg,rgba(0,0,0,0.12),transparent);margin-bottom:10px}
+    .proj h3{margin:0 0 6px 0}
+    .proj p{margin:0;color:var(--muted);font-size:14px}
+    aside .card + .card{margin-top:12px}
+    .contact-list{list-style:none;padding:0;margin:0}
+    .contact-list li{display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,0.03)}
+    .muted{color:var(--muted)}
+    footer{margin-top:22px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* small interactive styles */
+    .btn{display:inline-block;padding:8px 12px;background:var(--accent);color:white;border-radius:8px;text-decoration:none}
+    .topbar{display:flex;justify-content:flex-end;gap:10px}
+    .theme-toggle{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:6px;border-radius:8px;color:var(--muted);cursor:pointer}
+
+    /* contact form */
+    form label{display:block;font-size:13px;margin:8px 0 6px;color:var(--muted)}
+        form input,form textarea{width:100%;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit}
+        form textarea{min-height:90px}
+        .small{font-size:13px;color:var(--muted)}
+    </style>
 </head>
 <body>
-    <h1>About Navya's</h1>
-    <hr>
-    <h2>CSE and DS</h2>
-    <p><big>This two are very very bad girls.</big><small>But not that much </small>This is there first class in ic batch.
-        <br>Both are <u>betch</u> 3<sup>rd</sup> year in MTIE <i>CSE and DS</i></p>
-    <p>Programming languages:
-        <br>
-        <ul>
-            <li>c</li><li>java</li><li>python</li><li>html</li>
-        </ul>
-    </p>
-    <p><big>years done:</big>
-    <br>
-      <ol>
-        <li>1st</li><li>2nd</li><li>3d</li>
-      </ol></p>
-    <p>
-        <table>
-            <tr>
-                <th>5<sup>th</sup>sem</th>
-                <th>marks</th>
-                <th>grade</th>
-            </tr>
-            <tr>
-                <td id="id1">DBMS</td>
-                <td>99</td>
-                <td>S</td>
-            </tr>
-            <tr>
-                <td>SE</td>
-                <td>85</td>
-                <td>A</td>
-            </tr>
-            <tr>
-            <td>OS</td>
-            <td>87</td>
-            <td>B</td>
-            </tr>
-            <tr>
-                <td>MEFA</td>
-                <td>80</td>
-                <td>B</td>
-            </tr>
-            <tr>
-                <td>DS</td>
-                <td>90</td>
-                <td>A</td>
-            </tr>
-        </table>
-    </p>
-    
+    <div class="container">
+        <div class="topbar">
+            <button class="theme-toggle" id="themeToggle">Toggle Theme</button>
+        </div>
+
+        <header>
+            <div class="avatar">GH</div>
+            <div class="hero">
+                <h1>G. Hemasree</h1>
+                <p class="muted">BTech — Software Engineer | Mother Therasa Engineering Collage</p>
+                <div class="badge">Full-stack Web · Cloud · JavaScript · Java</div>
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <div class="card section">
+                    <h2>About</h2>
+                    <p class="small">I am a professional software engineer with experience building web applications using modern JavaScript frameworks and Java-based backends. I enjoy designing clean user experiences, writing maintainable code, and delivering production-ready solutions.</p>
+                </div>
+
+                <div class="card section">
+                    <h2>Skills</h2>
+                    <div class="skills">
+                        <span class="skill">Java</span>
+                        <span class="skill">Spring Boot</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">React</span>
+            <span class="skill">HTML & CSS</span>
+            <span class="skill">REST APIs</span>
+            <span class="skill">SQL</span>
+            <span class="skill">Git</span>
+                        <span class="skill">AWS</span>
+                    </div>
+                </div>
+
+                <div class="card section projects">
+                    <h2>Selected Projects</h2>
+                    <div class="proj">
+                        <h3>Project A — Task Manager</h3>
+                        <p>Full-stack task management app with user authentication, REST API (Spring Boot), and React frontend. Features real-time updates and role-based access.</p>
+                    </div>
+                    <div class="proj">
+                        <h3>Project B — E-commerce Prototype</h3>
+                        <p>Shopping cart and checkout flow, product catalog, and admin dashboard. Implemented responsive UI and server-side product search.</p>
+                    </div>
+
+                <div class="card section">
+                    <h2>Experience</h2>
+                    <p class="small"><strong>Software Engineer — Intern</strong> — Worked on backend services, API integrations, and automated tests. Contributed to code reviews and CI pipeline improvements.</p>
+                </div>
+
+                <div class="card section">
+                    <h2>Education</h2>
+                    <p class="small"><strong>BTech</strong> — Mother Therasa Engineering Collage</p>
+                </div>
+
+                <div class="card section">
+                    <h2>Contact</h2>
+                    <p class="small">Feel free to reach out for collaboration or opportunities.</p>
+                    <ul class="contact-list">
+                        <li><strong>Phone:</strong>&nbsp;<span class="muted">8688812593</span></li>
+                        <li><strong>Email:</strong>&nbsp;<span class="muted">hemasree2827@gmail.com</span></li>
+                        <li><strong>Location:</strong>&nbsp;<span class="muted">India</span></li>
+                    </ul>
+                </div>
+
+                <div class="card section">
+                    <h2>Send a message</h2>
+                    <form id="contactForm" onsubmit="return false">
+                        <label for="name">Name</label>
+                        <input id="name" placeholder="Your name" />
+            <label for="email">Email</label>
+            <input id="email" placeholder="you@example.com" />
+            <label for="message">Message</label>
+                        <textarea id="message" placeholder="A short message"></textarea>
+                        <div style="margin-top:10px;display:flex;gap:8px;align-items:center">
+                            <button class="btn" id="sendBtn">Send</button>
+                            <div id="formStatus" class="small muted"></div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <aside>
+                <div class="card">
+                    <h2>Quick Info</h2>
+                    <p class="small"><strong>Name:</strong> G. Hemasree<br /><strong>Degree:</strong> BTech<br /><strong>College:</strong> Mother Therasa Engineering Collage</p>
+                </div>
+
+                <div class="card">
+                    <h2>Links</h2>
+                    <p class="small"><a class="muted" href="#">GitHub</a> · <a class="muted" href="#">LinkedIn</a></p>
+                </div>
+            </aside>
+        </main>
+
+        <footer>
+            © <span id="year"></span> G. Hemasree — Built with HTML, CSS & JavaScript
+        </footer>
+    </div>
+
+    <script>
+        // small interactivity
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.getElementById('themeToggle').addEventListener('click', ()=>{
+            document.body.style.filter = document.body.style.filter === 'invert(1)' ? '' : 'invert(1) hue-rotate(180deg)';
+        });
+
+        const form = document.getElementById('contactForm');
+        const status = document.getElementById('formStatus');
+        document.getElementById('sendBtn').addEventListener('click', ()=>{
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            if(!name||!email||!message){ status.textContent = 'Please fill all fields.'; return; }
+            status.textContent = 'Thanks — message noted (demo).';
+            form.reset();
+        });
+    </script>
 </body>
 </html>
-//shift+1 enter
