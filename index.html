@@ -11,7 +11,8 @@
     body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.5;background:linear-gradient(180deg,#071029 0%,#081426 100%);color:#e6eef8}
     .container{max-width:1000px;margin:32px auto;padding:24px}
     header{display:flex;gap:20px;align-items:center}
-    .avatar{width:110px;height:110px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:36px;flex:0 0 110px}
+    .avatar{width:140px;height:150px;border-radius:100%;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:20px;flex:0 0 140px;overflow:hidden;border:1px solid rgba(255,255,255,0.04)}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
     .hero h1{margin:0;font-size:28px}
     .hero p{margin:6px 0;color:var(--muted)}
     .badge{display:inline-block;padding:6px 10px;background:var(--glass);border-radius:999px;font-size:13px;color:var(--muted);margin-top:8px}
@@ -38,6 +39,9 @@
     .btn{display:inline-block;padding:8px 12px;background:var(--accent);color:white;border-radius:8px;text-decoration:none}
     .topbar{display:flex;justify-content:flex-end;gap:10px}
     .theme-toggle{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:6px;border-radius:8px;color:var(--muted);cursor:pointer}
+    .section-nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;position:sticky;top:0;z-index:15;padding:10px 0;background:rgba(15,23,36,0.95);backdrop-filter:blur(10px)}
+    .section-nav a{display:inline-flex;align-items:center;justify-content:center;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,0.06);color:inherit;text-decoration:none;border:1px solid rgba(255,255,255,0.08);font-size:13px;transition:background .2s}
+    .section-nav a:hover{background:rgba(255,255,255,0.12)}
 
     /* contact form */
     form label{display:block;font-size:13px;margin:8px 0 6px;color:var(--muted)}
@@ -53,22 +57,30 @@
         </div>
 
         <header>
-            <div class="avatar">GH</div>
+            <div class="avatar">
+                <img src="WhatsApp Image 2026-06-13 at 12.04.55 PM navya.jpeg" alt="Profile photo">
+            </div>
             <div class="hero">
                 <h1>G. Hemasree</h1>
-                <p class="muted">BTech — Software Engineer | Mother Therasa Engineering Collage</p>
+                <p class="muted">BTech [CSE]— Software Engineer | Mother Therasa Engineering Collage</p>
                 <div class="badge">Full-stack Web · Cloud · JavaScript · Java</div>
+                <nav class="section-nav">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#education">Education</a>
+                    <a href="#contact">Contact</a>
+                </nav>
             </div>
         </header>
 
         <main>
             <section>
-                <div class="card section">
+                <div id="about" class="card section">
                     <h2>About</h2>
                     <p class="small">I am a professional software engineer with experience building web applications using modern JavaScript frameworks and Java-based backends. I enjoy designing clean user experiences, writing maintainable code, and delivering production-ready solutions.</p>
                 </div>
 
-                <div class="card section">
+                <div id="skills" class="card section">
                     <h2>Skills</h2>
                     <div class="skills">
                         <span class="skill">Java</span>
@@ -93,18 +105,19 @@
                         <h3>Project B — E-commerce Prototype</h3>
                         <p>Shopping cart and checkout flow, product catalog, and admin dashboard. Implemented responsive UI and server-side product search.</p>
                     </div>
+                </div>
 
                 <div class="card section">
                     <h2>Experience</h2>
                     <p class="small"><strong>Software Engineer — Intern</strong> — Worked on backend services, API integrations, and automated tests. Contributed to code reviews and CI pipeline improvements.</p>
                 </div>
 
-                <div class="card section">
+                <div id="education" class="card section">
                     <h2>Education</h2>
                     <p class="small"><strong>BTech</strong> — Mother Therasa Engineering Collage</p>
                 </div>
 
-                <div class="card section">
+                <div id="contact" class="card section">
                     <h2>Contact</h2>
                     <p class="small">Feel free to reach out for collaboration or opportunities.</p>
                     <ul class="contact-list">
@@ -139,7 +152,7 @@
 
                 <div class="card">
                     <h2>Links</h2>
-                    <p class="small"><a class="muted" href="#">GitHub</a> · <a class="muted" href="#">LinkedIn</a></p>
+                    <p class="small"><a class="muted" href="https://github.com/Hemasree28-g" target="_blank" rel="noopener noreferrer">GitHub</a> · <a class="muted" href="#">LinkedIn</a></p>
                 </div>
             </aside>
         </main>
